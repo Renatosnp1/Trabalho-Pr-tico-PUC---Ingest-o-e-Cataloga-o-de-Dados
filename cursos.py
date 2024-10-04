@@ -1,5 +1,5 @@
 from src.curso import Curso
-
+from aluno import Aluno
 
 eng_computacao = Curso(id_curso=1,
                        nome_curso='ENGENHARIA DE COMPUTAÇÃO',
@@ -44,3 +44,8 @@ tec_redes_digi = Curso(id_curso=5,
                        disciplica_por_periodo=6,
                        nota_corte=70,
                        carga_horaria_prevista=48)
+
+
+aluno = Aluno('')
+
+print(tec_redes_digi)
