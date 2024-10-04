@@ -3,6 +3,8 @@
 ## Curso:
 - **Pós-graduação em Engenharia de Dados**
 
+<img src="src/img/puc.png"  height="165">
+
 ## Universidade:
 - **PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS - PUC MINAS**
 
