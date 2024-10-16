@@ -59,9 +59,9 @@ class CriandoTurmas:
                 molde_turma['FREQ_ALUNO'] = [random.randint(
                     70, 100)/100 for i in range(curso['TOTAL_DISCIPLINA'])]
 
-                molde_turma['DATA_INGRESSO_CURSO'] = f'01/02/20{23+turma}'
+                molde_turma['DATA_INGRESSO_CURSO'] = f'01/02/20{15+turma}'
 
-                molde_turma['DATA_PREVISTA_CONCLUSAO'] = f'20/11/20{27+turma}'
+                molde_turma['DATA_PREVISTA_CONCLUSAO'] = f'20/11/20{18+turma}'
 
                 df1 = pd.concat([df1, molde_turma])
 

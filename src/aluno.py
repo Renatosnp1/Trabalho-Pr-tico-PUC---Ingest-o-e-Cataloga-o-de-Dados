@@ -68,9 +68,9 @@ class Aluno:
 
             self.registro_geral = fake.cpf()
 
-            start_date = datetime.strptime('1970-01-01', '%Y-%m-%d').date()
+            start_date = datetime.strptime('1950-01-01', '%Y-%m-%d').date()
 
-            end_date = datetime.strptime('2020-01-01', '%Y-%m-%d').date()
+            end_date = datetime.strptime('1996-01-01', '%Y-%m-%d').date()
 
             self.data_nascimento = fake.date_between(
                 start_date=start_date, end_date=end_date)
