@@ -1,40 +1,38 @@
+import pandas as pd
+import random
 
 
 class Atividade:
 
-# f.	Dados de atividades realizadas pelo aluno:
-        # i.	Matrícula do aluno
-        # ii.	Código do curso
-        # iii.	Código da disciplina
-        # iv.	Período
-        # v.	Código da atividade (número sequencial de acordo com a atividade)
-        # vi.	Nome da atividade (Exercício | Trabalho | Avaliação)
-        # vii.	Valor da atividade
-        # viii.	Nota obtida pelo aluno
+    def __init__(self) -> None:
 
+        pass
 
-    def __init__(self,  id_aluno: int,
-                        id_curso:int,
-                        id_disciplina: int,
-                        periodo: int,
-                        id_atividade: int,
-                        nome_atividade: str,
-                        valor_atividade: float,
-                        nota_atividade: float) -> None:
+    def criando_atividades_csv(self):
+        path = r'data\turmas.csv'
 
+        cursos = pd.read_csv(path, encoding='UTF-8')
 
-        self.id_aluno = id_aluno
+        cursos = cursos[['ID_CURSO', 'ID_DISCIPLINA', 'ID_ALUNO', 'PERIODO']]
 
-        self.id_curso = id_curso
+        exercicio = cursos.copy()
+        trabalho = cursos.copy()
+        avaliacao = cursos.copy()
 
-        self.id_disciplina = id_disciplina
+        exercicio['TIPO_ATIVIDADE'] = 'EXERCICIO'
+        exercicio['NOTA'] = [random.randint(
+            22, 30) for i in range(exercicio.shape[0])]
 
-        self.periodo = periodo
+        trabalho['TIPO_ATIVIDADE'] = 'TRABALHO'
+        trabalho['NOTA'] = [random.randint(
+            22, 30) for i in range(trabalho.shape[0])]
 
-        self.id_atividade = id_atividade
+        avaliacao['TIPO_ATIVIDADE'] = 'AVALIAÇÃO'
+        avaliacao['NOTA'] = [random.randint(
+            25, 40) for i in range(avaliacao.shape[0])]
 
-        self.nome_atividade = nome_atividade
+        cursos1 = pd.concat([exercicio, trabalho, avaliacao])
 
-        self.valor_atividade = valor_atividade
+        cursos1['ID_ATIVIDADE'] = 100000 + cursos1.index
 
-        self.nota_atividade = nota_atividade
+        cursos1.to_csv('data/atividades.csv', index=False, encoding='UTF-8')
