@@ -12,10 +12,10 @@
 - **Ingestão e Catalogação de Dados**
 
 ## Alunos:
-- Renato
-- Bruno
-- Paulo
-- Pedro
+- Renato Vionicius Carneiro
+- Bruno Hachenburg
+- Paulo Victor Sobrinho
+- Pedro Henrique Ferreira
 
 ---
 
